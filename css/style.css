@@ -25,13 +25,14 @@
 }
 
 
-
+.topnav ul li svg {
+   display: none;
+  
+  }
+  
 
 body{
     background-color: var(--primary-color);
-   
-    
-    
 }
 
 
@@ -93,8 +94,16 @@ h2{
 body {
     background-color: var(--primary-color);
     color: #333;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.6;
+}
+
+.recipe-steps{
+    margin: 50px;
+    
+    list-style-type: square;
+    list-style-position: inside;
+    border: #ffc4c4 2px solid;
 }
 
 a {
@@ -175,10 +184,36 @@ img, video{
 }
 
 .gallery {
+    
+    
     display: grid;
-    grid-template-columns: 200px 200px;  
+    grid-template-columns: 200px;  
     gap: 20px;
 }
+
+.recipe-steps{
+    margin: 50px;
+    
+    list-style-type: square;
+    list-style-position: inside;
+    border: #ffc4c4 2px solid;
+}
+
+h1{
+    margin-top: -20px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
 
 
 
@@ -331,9 +366,68 @@ span{
           }
         
 
-@media (max-width: 600px) {
+@media (min-width: 601px) {
 
+    .topnav ul li  svg {
+        display: flex;
+        
+        margin-right: 5px;
+        height: 24px;
+
+        width: 24px; 
+        fill: currentColor; 
+        padding: 1px;
+        box-sizing: border-box;
+      }
+    
 
  
+
+
+    .gallery_flex{
+        display: flex;  
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    
+    .gallery {
+        display: grid;
+        grid-template-columns: 200px 200px;  
+        gap: 20px;
+    }
+
+    body {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 200px);
+    }
+
+    p {
+        font-size: 1.125em; 
+        line-height: 1.8;
+        padding: 15px; 
+        margin: 20px 0; 
+        max-width: 80%; 
+        margin-left: auto; 
+        margin-right: auto;
+        border: var(--accent-color) 2px solid;
+        border-radius: 15px;
+    }
+    
+    .likes{
+        padding: 30px; 
+        gap: 15px; 
+        margin: 40px auto; 
+        max-width: 80%; 
+        font-size: 1.1em;
+    }
+
     
 }
